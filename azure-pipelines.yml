@@ -28,7 +28,8 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     publishRunAttachments: true
 
-- task: PublishTestResults@2
+- task: PublishTestResults@3
+  inputs:
     displayName: 'Publish Test Results '
     condition: always()
     testResultsFormat: 'JUnit'
