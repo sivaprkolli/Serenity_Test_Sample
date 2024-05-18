@@ -28,7 +28,7 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     publishRunAttachments: true
 
-- task: PublishTestResults@3
+- task: PublishTestResults@1
   inputs:
     displayName: 'Publish Test Results '
     condition: always()
