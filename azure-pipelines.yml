@@ -28,10 +28,10 @@ steps:
     testResultsFiles: '**/TEST-*.xml'
     publishRunAttachments: true
 
+  # PUBLISH JUNIT RESULTS
 - task: PublishTestResults@1
   inputs:
-    displayName: 'Publish Test Results '
-    condition: always()
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/TEST-*.xml'
+  condition: succeededOrFailed()
 
