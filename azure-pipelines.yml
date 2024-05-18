@@ -19,14 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-
-- task: PublishTestResults@2
-  inputs:
-    condition: succeededOrFailed()
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/TEST-*.xml'
-    publishRunAttachments: true
+    goals: 'clean verify'
 
   # PUBLISH JUNIT RESULTS
 - task: PublishTestResults@1
