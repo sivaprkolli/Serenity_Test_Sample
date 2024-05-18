@@ -23,5 +23,7 @@ steps:
 
 - task: PublishTestResults@2
   inputs:
+    condition: succeededOrFailed()
     testResultsFormat: 'JUnit'
-    testResultsFiles: '*/*.xml'
+    testResultsFiles: '**/TEST-*.xml'
+    publishRunAttachments: true
